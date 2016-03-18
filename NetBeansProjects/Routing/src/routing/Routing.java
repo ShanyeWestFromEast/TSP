@@ -132,5 +132,18 @@ public class Routing
         
         return dailyPayment = 15000; //rent
     }
+    
+    public static double employeeCost(double time)
+    {
+        double pay = 0;
+        if (time <= 8)
+        {
+            return pay = time * 30;
+        }
+        else
+        {
+            return pay = 240 + 45*(time - 8);
+        }
+    }
 
 }

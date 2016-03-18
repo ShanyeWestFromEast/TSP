@@ -109,4 +109,28 @@ public class Routing
         return pDistance;
     }
 
+    public static double convertToMile(int feet)
+    {
+        double mile;
+        return mile = feet / 5000;
+    }
+
+    public static double calcFuelCharge(double mile)
+    {
+        return 5.0 * mile;
+    }
+    
+    public static int eitherPurchaseOrRent(double mile)
+    {
+        int dailyPayment;
+        
+        if (mile > 5000)
+        {
+            dailyPayment = 100000; //purchase
+            return dailyPayment;
+        }
+        
+        return dailyPayment = 15000; //rent
+    }
+
 }

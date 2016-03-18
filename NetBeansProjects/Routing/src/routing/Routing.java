@@ -108,5 +108,42 @@ public class Routing
         double pDistance = Math.abs(Math.sqrt(Math.pow((x.getYdistance() - y.getYdistance()), 2) + Math.pow((x.getXdistance() - y.getXdistance()), 2)));
         return pDistance;
     }
-
+    
+    public static double convertToMile(int feet)
+    {
+        double mile;
+        return mile = feet / 5000;
+    }
+    
+    public static double calcFuelCharge(double mile)
+    {
+        return 5.0 * mile;
+    }
+    
+    public static int eitherPurchaseOrRent(double mile)
+    {
+        int dailyPayment;
+        
+        if (mile > 5000)
+        {
+            dailyPayment = 100000; //purchase
+            return dailyPayment;
+        }
+        
+        return dailyPayment = 15000; //rent
+    }
+    
+    public static double employeeCost(double time)
+    {
+        double pay = 0;
+        if (time <= 8)
+        {
+            return pay = time * 30;
+        }
+        else
+        {
+            return pay = 240 + 45*(time - 8);
+        }
+    }
+    
 }
